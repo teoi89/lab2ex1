@@ -11,15 +11,13 @@ namespace lab2ex1
             
             Console.WriteLine("Insert a number:");
 
-            int x = int.Parse(Console.ReadLine());
-            int y;
+            int number = int.Parse(Console.ReadLine());
             int sum = 0;
 
-            while(x > 0)
+            while(number > 0)
             {
-                y = x % 10;
-                sum = sum + y;
-                x = x / 10;
+                sum = sum + number % 10;
+                number = number / 10;
             }
             Console.WriteLine("Sum of the entered digits is " + sum);
         }
